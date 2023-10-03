@@ -1,0 +1,18 @@
+<div class="bg-dark border-right p-3" id="sidebar">
+  <h3>GifsApp</h3>
+  <hr class="text-white">
+
+  <!-- lista barra lateral historial -->
+  <div class="list-group list-reset">
+    <!-- Se agrega un boton a la sección por cada elemento dentro del arreglo del historial -->
+    <button
+    *ngFor="let tag of tags"
+    (click)="searchTag( tag )"
+    class="list-group-item list-group-item-action">
+      <!-- El pipe titlecase da formato al mostrar el texto, sin alterar las propiedades
+      del contenido en el código ni en la base de datos -->
+      {{ tag | titlecase }}
+    </button>
+  </div>
+
+</div>
